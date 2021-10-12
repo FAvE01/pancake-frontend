@@ -1,5 +1,6 @@
 import { MenuItemsType, DropdownMenuItemType } from '@pancakeswap/uikit'
 import { ContextApi } from 'contexts/Localization/types'
+import { nftsBaseUrl, pancakeBunniesAddress, pancakeSquadAddress } from 'views/Nft/market/constants'
 
 export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
 
@@ -52,14 +53,24 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   },
   {
     label: t('NFT'),
-    href: '/collectibles',
+    href: `${nftsBaseUrl}`,
     icon: 'Nft',
-    showOnMobile: false,
-    showItemsOnMobile: false,
     items: [
       {
-        label: t('Collectibles'),
-        href: '/collectibles',
+        label: t('Overview'),
+        href: `${nftsBaseUrl}`,
+        status: {
+          text: t('Live'),
+          color: 'failure',
+        },
+      },
+      {
+        label: t('Bunnies'),
+        href: `${nftsBaseUrl}/collections/${pancakeBunniesAddress}`,
+      },
+      {
+        label: t('Squad'),
+        href: `${nftsBaseUrl}/collections/${pancakeSquadAddress}`,
       },
     ],
   },

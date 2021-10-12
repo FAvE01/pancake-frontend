@@ -5,7 +5,6 @@ import { languageList } from 'config/localization/languages'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import { usePriceCakeBusd } from 'state/farms/hooks'
-import { useProfile } from 'state/profile/hooks'
 import config from './config/config'
 import UserMenu from './UserMenu'
 import GlobalSettings from './GlobalSettings'
@@ -15,7 +14,6 @@ import { footerLinks } from './config/footerConfig'
 const Menu = (props) => {
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
-  const { profile } = useProfile()
   const { currentLanguage, setLanguage, t } = useTranslation()
   const { pathname } = useLocation()
 
@@ -38,13 +36,6 @@ const Menu = (props) => {
       activeItem={activeMenuItem?.href}
       activeSubItem={activeSubMenuItem?.href}
       buyCakeLabel={t('Buy CAKE')}
-      profile={{
-        username: profile?.username,
-        image: profile?.nft ? `/images/nfts/${profile.nft?.images.sm}` : undefined,
-        profileLink: '/profile',
-        noProfileLink: '/profile',
-        showPip: !profile?.username,
-      }}
       {...props}
     />
   )

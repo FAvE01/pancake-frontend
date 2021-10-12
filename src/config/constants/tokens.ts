@@ -32,6 +32,14 @@ export const mainnetTokens = {
     'https://pancakeswap.finance/',
   ),
   tlos: new Token(MAINNET, '0xb6C53431608E626AC81a9776ac3e999c5556717c', 18, 'TLOS', 'Telos', 'https://www.telos.net/'),
+  beta: new Token(
+    MAINNET,
+    '0xBe1a001FE942f96Eea22bA08783140B9Dcc09D28',
+    18,
+    'BETA',
+    'Beta Finance',
+    'https://betafinance.org',
+  ),
   nft: new Token(MAINNET, '0x1fC9004eC7E5722891f5f38baE7678efCB11d34D', 6, 'NFT', 'APENFT', 'https://apenft.org'),
   stephero: new Token(
     MAINNET,
@@ -1636,12 +1644,36 @@ export const mainnetTokens = {
     'NAOSToken',
     'https://naos.finance/',
   ),
+  cart: new Token(
+    MAINNET,
+    '0x5C8C8D560048F34E5f7f8ad71f2f81a89DBd273e',
+    18,
+    'CART',
+    'CryptoArt.ai',
+    'https://cryptoart.ai/',
+  ),
+  light: new Token(
+    MAINNET,
+    '0x037838b556d9c9d654148a284682C55bB5f56eF4',
+    18,
+    'LIGHT',
+    'Lightning',
+    'https://lightningprotocol.finance/',
+  ),
+  rpg: new Token(
+    MAINNET,
+    '0xc2098a8938119A52B1F7661893c0153A6CB116d5',
+    18,
+    'RPG',
+    'Rangers Protocol',
+    'https://www.rangersprotocol.com/',
+  ),
 }
 
 export const testnetTokens = {
   wbnb: new Token(
     TESTNET,
-    '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+    '0x094616F0BdFB0b526bD735Bf66Eca0Ad254ca81F',
     18,
     'WBNB',
     'Wrapped BNB',
